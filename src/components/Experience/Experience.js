@@ -58,23 +58,26 @@ const Experience = () => {
             {education.map((item) => (
               <article
                 key={`${item.institution}-${item.degree}`}
-                className='experience__card'
+                className='experience__card experience__card--education'
               >
-                <div className='experience__card-header'>
-                  <div>
-                    <p className='experience__company'>{item.institution}</p>
-                    <p className='experience__position'>{item.degree}</p>
+                <div className='experience__band' />
+                <div className='experience__body'>
+                  <div className='experience__card-header'>
+                    <div>
+                      <p className='experience__company'>{item.institution}</p>
+                      <p className='experience__position'>{item.degree}</p>
+                    </div>
+                    <div className='experience__meta'>
+                      <p className='experience__period'>{item.period}</p>
+                      <p className='experience__location'>{item.location}</p>
+                    </div>
                   </div>
-                  <div className='experience__meta'>
-                    <p>{item.period}</p>
-                    <p>{item.location}</p>
-                  </div>
+                  <ul className='experience__details'>
+                    {item.details.map((detail) => (
+                      <li key={detail}>{detail}</li>
+                    ))}
+                  </ul>
                 </div>
-                <ul className='experience__details'>
-                  {item.details.map((detail) => (
-                    <li key={detail}>{detail}</li>
-                  ))}
-                </ul>
               </article>
             ))}
           </div>
@@ -88,30 +91,33 @@ const Experience = () => {
                 key={`${role.company}-${role.position}-${role.period}`}
                 className='experience__card experience__card--professional'
               >
-                <div className='experience__card-header'>
-                  <div>
-                    <p className='experience__company'>{role.company}</p>
-                    <p className='experience__position'>{role.position}</p>
+                <div className='experience__band' />
+                <div className='experience__body'>
+                  <div className='experience__card-header'>
+                    <div>
+                      <p className='experience__company'>{role.company}</p>
+                      <p className='experience__position'>{role.position}</p>
+                    </div>
+                    <div className='experience__meta'>
+                      <p className='experience__period'>{role.period}</p>
+                      <p className='experience__location'>{role.location}</p>
+                    </div>
                   </div>
-                  <div className='experience__meta'>
-                    <p className='experience__period'>{role.period}</p>
-                    <p className='experience__location'>{role.location}</p>
-                  </div>
-                </div>
-                <ul className='experience__details'>
-                  {role.details.map((detail) => (
-                    <li key={detail}>{detail}</li>
-                  ))}
-                </ul>
-                {role.stack && (
-                  <ul className='experience__stack'>
-                    {role.stack.map((item) => (
-                      <li key={item} className='experience__stack-item'>
-                        {item}
-                      </li>
+                  <ul className='experience__details'>
+                    {role.details.map((detail) => (
+                      <li key={detail}>{detail}</li>
                     ))}
                   </ul>
-                )}
+                  {role.stack && (
+                    <ul className='experience__stack'>
+                      {role.stack.map((item) => (
+                        <li key={item} className='experience__stack-item'>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </article>
             ))}
           </div>

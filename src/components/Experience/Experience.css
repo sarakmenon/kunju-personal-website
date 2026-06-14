@@ -11,49 +11,64 @@
 
 .experience__timeline {
   position: relative;
-  padding-left: 2.4rem;
-}
-
-.experience__timeline::before {
-  content: '';
-  position: absolute;
-  left: 1rem;
-  top: 0.5rem;
-  bottom: 0.5rem;
-  width: 2px;
-  background: rgba(41, 120, 181, 0.2);
 }
 
 .experience__timeline .experience__card {
-  margin-left: 1.4rem;
+  margin-left: 0;
 }
 
 .experience__card {
+  --experience-accent: #2978b5;
+  --experience-accent-soft: rgba(41, 120, 181, 0.1);
+  overflow: hidden;
   background-color: var(--clr-bg-alt);
-  padding: 1.5rem;
   border: 1px solid rgba(41, 120, 181, 0.12);
-  border-radius: 0.9rem;
-  box-shadow: var(--shadow);
+  border-radius: 0.95rem;
+  box-shadow: 0 14px 36px rgba(41, 120, 181, 0.08);
   transition: opacity 0.6s ease, transform 0.6s ease,
     background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   position: relative;
 }
 
-.experience__card--professional {
-  overflow: hidden;
-  padding: 1.8rem 2rem;
-  box-shadow: 0 14px 36px rgba(41, 120, 181, 0.08);
+.experience__card--education {
+  --experience-accent: #1f669f;
+  --experience-accent-soft: rgba(31, 102, 159, 0.12);
 }
 
-.experience__card--professional::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 1.8rem;
-  bottom: 1.8rem;
-  width: 4px;
+.experience__card--professional {
+  --experience-accent: #1f669f;
+  --experience-accent-soft: rgba(31, 102, 159, 0.12);
+}
+
+.experience__band {
+  min-height: 3.2rem;
+  padding: 1rem 1.35rem;
+  background: linear-gradient(
+    135deg,
+    var(--experience-accent-soft),
+    rgba(255, 255, 255, 0)
+  );
+  border-bottom: 1px solid var(--experience-accent-soft);
+}
+
+.experience__label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.75rem;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 999px;
-  background-color: var(--clr-primary);
+  color: var(--experience-accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: rgba(255, 255, 255, 0.42);
+}
+
+.experience__body {
+  padding: 1.55rem 1.75rem 1.75rem;
 }
 
 .experience.is-reveal-ready .experience__card:not(.reveal) {
@@ -66,22 +81,6 @@
   transform: translateY(0);
 }
 
-.experience__timeline .experience__card::before {
-  content: '';
-  position: absolute;
-  left: -2.1rem;
-  top: 1.5rem;
-  width: 0.9rem;
-  height: 0.9rem;
-  border-radius: 50%;
-  background: var(--clr-primary);
-  box-shadow: 0 0 0 4px rgba(234, 244, 255, 0.9);
-}
-
-.dark .experience__timeline .experience__card::before {
-  box-shadow: 0 0 0 4px rgba(25, 31, 51, 0.95);
-}
-
 .experience__card-header {
   display: flex;
   justify-content: space-between;
@@ -92,7 +91,7 @@
 
 .experience__company {
   font-weight: 700;
-  color: var(--clr-primary);
+  color: var(--clr-fg-alt);
   margin-bottom: 0.25rem;
   font-size: 1.08rem;
 }
@@ -117,12 +116,12 @@
   align-items: center;
   min-height: 2rem;
   padding: 0.35rem 0.75rem;
-  border: 1px solid rgba(41, 120, 181, 0.2);
+  border: 1px solid var(--experience-accent-soft);
   border-radius: 999px;
-  color: var(--clr-primary);
+  color: var(--experience-accent);
   font-size: 0.85rem;
   font-weight: 700;
-  background-color: rgba(41, 120, 181, 0.06);
+  background-color: var(--experience-accent-soft);
 }
 
 .dark .experience__period {
@@ -156,7 +155,7 @@
   width: 0.38rem;
   height: 0.38rem;
   border-radius: 50%;
-  background-color: var(--clr-primary);
+  background-color: var(--experience-accent);
 }
 
 .experience__stack {
@@ -169,18 +168,29 @@
 
 .experience__stack-item {
   padding: 0.42rem 0.72rem;
-  border: 1px solid rgba(41, 120, 181, 0.18);
+  border: 1px solid var(--experience-accent-soft);
   border-radius: 999px;
-  color: var(--clr-fg-alt);
+  color: rgba(58, 58, 58, 0.82);
   font-size: 0.78rem;
   font-weight: 700;
   line-height: 1;
-  background-color: rgba(41, 120, 181, 0.05);
+  background-color: var(--experience-accent-soft);
 }
 
 .dark .experience__stack-item {
   border-color: rgba(142, 169, 255, 0.22);
+  color: rgba(238, 240, 255, 0.82);
   background-color: rgba(142, 169, 255, 0.07);
+}
+
+.dark .experience__card {
+  border-color: rgba(142, 169, 255, 0.12);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.16);
+}
+
+.dark .experience__label {
+  border-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.06);
 }
 
 .experience__honors {
@@ -218,16 +228,12 @@
 }
 
 @media (max-width: 600px) {
-  .experience__timeline {
-    padding-left: 1.5rem;
-  }
-
-  .experience__timeline .experience__card {
-    margin-left: 0.8rem;
-  }
-
   .experience__card--professional {
-    padding: 1.35rem;
+    padding: 0;
+  }
+
+  .experience__body {
+    padding: 1.25rem;
   }
 
   .experience__card-header {
