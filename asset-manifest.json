@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/kunju-personal-website/static/css/main.88241b74.chunk.css",
+    "main.js": "/kunju-personal-website/static/js/main.2334152d.chunk.js",
+    "main.js.map": "/kunju-personal-website/static/js/main.2334152d.chunk.js.map",
+    "runtime-main.js": "/kunju-personal-website/static/js/runtime-main.e9e2a406.js",
+    "runtime-main.js.map": "/kunju-personal-website/static/js/runtime-main.e9e2a406.js.map",
+    "static/js/2.4cb15c65.chunk.js": "/kunju-personal-website/static/js/2.4cb15c65.chunk.js",
+    "static/js/2.4cb15c65.chunk.js.map": "/kunju-personal-website/static/js/2.4cb15c65.chunk.js.map",
+    "index.html": "/kunju-personal-website/index.html",
+    "static/css/main.88241b74.chunk.css.map": "/kunju-personal-website/static/css/main.88241b74.chunk.css.map",
+    "static/js/2.4cb15c65.chunk.js.LICENSE.txt": "/kunju-personal-website/static/js/2.4cb15c65.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e9e2a406.js",
+    "static/js/2.4cb15c65.chunk.js",
+    "static/css/main.88241b74.chunk.css",
+    "static/js/main.2334152d.chunk.js"
+  ]
+}
