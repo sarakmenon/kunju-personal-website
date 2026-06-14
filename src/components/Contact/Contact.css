@@ -1,3 +1,23 @@
 .contact {
   flex-direction: column;
+  text-align: center;
+}
+
+.contact__cta {
+  margin-bottom: 1.5rem;
+  max-width: 680px;
+  color: var(--clr-fg);
+}
+
+.contact__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact__meta {
+  color: var(--clr-fg-alt);
+  font-size: 0.95rem;
 }

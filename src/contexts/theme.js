@@ -3,21 +3,40 @@ import PropTypes from 'prop-types'
 
 const ThemeContext = createContext()
 
+const getInitialTheme = () => {
+  const savedTheme = localStorage.getItem('themeName')
+
+  if (savedTheme === 'light' || savedTheme === 'dark') return savedTheme
+
+  return window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? 'dark'
+    : 'light'
+}
+
 const ThemeProvider = ({ children }) => {
-  const [themeName, setThemeName] = useState('light')
+  const [themeName, setThemeName] = useState(getInitialTheme)
 
   useEffect(() => {
-    const darkMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    setThemeName(darkMediaQuery.matches ? 'dark' : 'light')
-    darkMediaQuery.addEventListener('change', (e) => {
-      setThemeName(e.matches ? 'dark' : 'light')
-    });
+    localStorage.setItem('themeName', themeName)
+  }, [themeName])
+
+  useEffect(() => {
+    const darkMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    const handleChange = (e) => {
+      if (!localStorage.getItem('themeName')) {
+        setThemeName(e.matches ? 'dark' : 'light')
+      }
+    }
+
+    darkMediaQuery.addEventListener('change', handleChange)
+
+    return () => {
+      darkMediaQuery.removeEventListener('change', handleChange)
+    }
   }, [])
 
   const toggleTheme = () => {
-    const name = themeName === 'dark' ? 'light' : 'dark'
-    localStorage.setItem('themeName', name)
-    setThemeName(name)
+    setThemeName((currentTheme) => (currentTheme === 'dark' ? 'light' : 'dark'))
   }
 
   return (
