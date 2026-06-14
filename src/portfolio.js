@@ -4,8 +4,8 @@ const header = {
 }
 
 const about = {
-  name: 'Saraswathi “Kunju” Menon',
-  role: 'Software Engineering Candidate | AI & Agentic Systems',
+  name: 'Saraswathi (Kunju) Menon',
+  role: 'Building AI agents, automation systems, and developer tools.',
   picture: `${process.env.PUBLIC_URL}/images/headshot.jpg`,
   description:
     'I’m a Computer Science student at The University of Texas at Dallas with a 4.0 GPA, graduating in May 2027. My work focuses on software engineering, generative AI, agentic systems, RAG, full-stack development, and applied machine learning. I’ve built AI agents, secure APIs, React/Node interfaces, automation workflows, and research-driven ML tools across internships, research labs, and student projects.',
