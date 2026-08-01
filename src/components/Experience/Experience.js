@@ -95,7 +95,21 @@ const Experience = () => {
                 <div className='experience__body'>
                   <div className='experience__card-header'>
                     <div>
-                      <p className='experience__company'>{role.company}</p>
+                      <div className='experience__company-row'>
+                        <p className='experience__company'>{role.company}</p>
+                        {role.website && (
+                          <a
+                            className='experience__website'
+                            href={role.website}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            aria-label={`Visit ${role.company} website`}
+                          >
+                            {new URL(role.website).hostname.replace('www.', '')}{' '}
+                            <span aria-hidden='true'>↗</span>
+                          </a>
+                        )}
+                      </div>
                       <p className='experience__position'>{role.position}</p>
                     </div>
                     <div className='experience__meta'>
@@ -103,11 +117,35 @@ const Experience = () => {
                       <p className='experience__location'>{role.location}</p>
                     </div>
                   </div>
-                  <ul className='experience__details'>
-                    {role.details.map((detail) => (
-                      <li key={detail}>{detail}</li>
-                    ))}
-                  </ul>
+                  {role.projects ? (
+                    <div className='experience__projects'>
+                      {role.projects.map((project) => (
+                        <section className='experience__project' key={project.name}>
+                          <h4 className='experience__project-title'>{project.name}</h4>
+                          <ul className='experience__details'>
+                            {project.details.map((detail) => (
+                              <li key={detail}>{detail}</li>
+                            ))}
+                          </ul>
+                          {project.stack && (
+                            <ul className='experience__stack'>
+                              {project.stack.map((item) => (
+                                <li key={item} className='experience__stack-item'>
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </section>
+                      ))}
+                    </div>
+                  ) : (
+                    <ul className='experience__details'>
+                      {role.details.map((detail) => (
+                        <li key={detail}>{detail}</li>
+                      ))}
+                    </ul>
+                  )}
                   {role.stack && (
                     <ul className='experience__stack'>
                       {role.stack.map((item) => (

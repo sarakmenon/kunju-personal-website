@@ -32,26 +32,53 @@ const experience = [
     period: 'May 2026 – Present',
     location: 'Frisco, TX',
     details: [
-      'Developed an AI-powered deployment automation assistant that orchestrates Terraform plans, control-plane APIs, and provisioning workflows for customer onboarding.',
-      'Created evaluation and testing frameworks to validate agent responses against deployment scenarios, improving troubleshooting accuracy and reducing incorrect remediation recommendations.',
-      'Implemented multi-step API chaining across SaaS control-plane services to retrieve onboarding status, customer configuration, deployment metadata, and instance details for provisioning workflows.',
+      'Developed an AI-powered deployment assistant using agentic workflows, specialized AI workers, and reusable skills to orchestrate Terraform plans, control-plane APIs, and customer provisioning, increasing deployment automation by 60%.',
+      'Designed LLM evaluation frameworks that measured response quality, remediation accuracy, and end-to-end workflow correctness across diverse deployment scenarios.',
+      'Engineered backend orchestration across specialized workers and SaaS APIs, chaining onboarding status, customer configuration, deployment metadata, and instance data to support autonomous reasoning throughout the provisioning lifecycle.',
       'Served as an Intern Ambassador, representing the internship cohort and fostering cross-team collaboration.',
     ],
-    stack: ['AI Agents', 'Terraform', 'Control-plane APIs', 'Evaluation', 'SaaS'],
+    stack: ['Agentic Workflows', 'LLM Evaluation', 'Terraform', 'Control-plane APIs', 'SaaS'],
+  },
+  {
+    company: 'MATH-101',
+    website: 'https://math-101.com/',
+    position: 'Full-Stack Web Developer',
+    period: 'Aug 2025 – Present',
+    location: 'Remote',
+    details: [
+      'Developed and deployed a production-grade tutoring and course-management platform using Next.js, React, TypeScript, Tailwind CSS, and Firebase Authentication, Firestore, Storage, and Hosting.',
+      'Implemented role-based access control for administrators, students, and pending users, including protected routes, account approval, course assignment, suspension, and automated email workflows.',
+      'Built an administrative dashboard for managing users, courses, permissions, and account lifecycle operations.',
+      'Hardened the platform with Firebase Security Rules, server-side token verification, granular file permissions, input validation, rate limiting, bot protection, and emulator-based API, database, and storage security tests.',
+    ],
+    stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Firebase', 'RBAC'],
   },
   {
     company: 'Amdocs @ AT&T',
     position: 'Generative AI Engineer',
     period: 'Aug 2025 – Dec 2025',
     location: 'Plano, TX',
-    details: [
-      'Built an agentic chatbot using LangGraph Studio to automatically generate AT&T cloud-connection configuration JSONs for NetBond Advanced Chat.',
-      'Designed and integrated a modular workflow with REST API calls to an MCP server to retrieve context from ingested domain files and support dynamic configuration recommendations.',
-      'Implemented a React.js and Node.js interface that visualized generated configurations in real time for engineers and stakeholders.',
-      'Migrated and refactored REST APIs into an updated service architecture, improving compatibility and performance across environments.',
-      'Deployed application code through Azure DevOps pipelines and used KQL/ADX logs to diagnose system issues and accelerate root-cause analysis.',
+    projects: [
+      {
+        name: 'NetBond Advanced Chat',
+        details: [
+          'Developed an agentic AI assistant using LangGraph Studio and transformer-based LLMs to automatically generate secure AT&T cloud-connection configurations.',
+          'Designed modular RAG workflows using REST APIs and an MCP server to retrieve domain knowledge and generate context-aware cloud-configuration recommendations.',
+          'Implemented a React.js and Node.js interface that allows users to visualize generated configurations in real time.',
+          'Applied prompt engineering, structured reasoning, and RAG techniques to produce secure, compliant, and accurate outputs aligned with AT&T connection standards.',
+        ],
+        stack: ['LangGraph', 'Transformer LLMs', 'RAG', 'MCP', 'React', 'Node.js'],
+      },
+      {
+        name: 'AskVoice',
+        details: [
+          'Migrated and refactored REST APIs to an updated service architecture, ensuring compatibility and improved performance across environments.',
+          'Deployed application updates to development environments through Azure DevOps pipelines for integration testing.',
+          'Used Kusto Query Language (KQL) to analyze Azure Data Explorer (ADX) logs, diagnose system issues, and accelerate root-cause identification.',
+        ],
+        stack: ['REST APIs', 'Azure DevOps', 'KQL', 'Azure Data Explorer'],
+      },
     ],
-    stack: ['LangGraph', 'MCP', 'REST APIs', 'React', 'Node.js', 'Azure DevOps'],
   },
   {
     company: 'Amdocs @ AT&T',
@@ -59,10 +86,10 @@ const experience = [
     period: 'Jun 2025 – Aug 2025',
     location: 'Plano, TX',
     details: [
-      'Built an AI-driven agentic workflow system for the AT&T Marketing Team using LangGraph and LangChain with GPT-4o for prompt engineering, accessibility optimization, and brand-voice alignment.',
-      'Designed modular AI agents with domain-specific logic and semantic similarity scoring to ensure campaign outputs matched creative blueprints and compliance standards.',
+      'Built an agentic workflow system for the AT&T Marketing Team with LangGraph, LangChain, and GPT-4o, coordinating prompt generation, accessibility optimization, and brand-voice alignment.',
+      'Designed modular agents that encapsulated domain-specific logic and combined semantic similarity scoring with LLM reasoning to validate campaign assets against creative-blueprint and compliance requirements.',
       'Developed a secure FastAPI RAG API with OAuth2/JWT authentication, enabling internal teams to query Gen-Z advertising research documents through natural language.',
-      'Automated data ingestion pipelines, including JSON extraction from PDFs and PPTs, and built research-to-PPTX generation workflows to reduce manual curation time from hours to minutes.',
+      'Engineered data pipelines that extracted structured JSON from PDFs and PowerPoint files and fed automated research-to-PPTX generation workflows, reducing manual curation from hours to minutes.',
     ],
     stack: ['LangGraph', 'LangChain', 'FastAPI', 'RAG', 'OAuth2/JWT', 'Python'],
   },
@@ -97,43 +124,43 @@ const projects = [
     name: 'NetBond Advanced Chat',
     category: 'AI Agent',
     description:
-      'Built an agentic chatbot using LangGraph Studio to automatically generate AT&T cloud-connection configuration JSONs and deliver context-aware deployment recommendations.',
-    stack: ['LangGraph', 'REST APIs', 'MCP', 'React', 'Node.js'],
+      'Engineered a LangGraph-based AI assistant that used transformer LLMs and modular RAG calls to an MCP server to retrieve domain context and generate secure, standards-compliant AT&T cloud-connection configurations, surfaced through a real-time React and Node.js interface.',
+    stack: ['LangGraph', 'Transformer LLMs', 'RAG', 'REST APIs', 'MCP', 'React', 'Node.js'],
   },
   {
     name: 'AskVoice',
     category: 'Backend API',
     description:
-      'Modernized REST APIs and deployed application code through Azure DevOps pipelines, then used KQL and ADX logs to diagnose production issues and accelerate root-cause analysis.',
+      'Migrated and refactored REST APIs for an updated service architecture, validated deployments across environments through Azure DevOps pipelines, and queried Azure Data Explorer logs with KQL to isolate failures and accelerate root-cause analysis.',
     stack: ['REST APIs', 'Azure DevOps', 'KQL', 'ADX'],
   },
   {
     name: 'AT&T Marketing Agentic Workflow',
     category: 'AI Agent',
     description:
-      'Built an AI workflow system that generated campaign assets aligned with brand voice, accessibility, and creative blueprint requirements using GPT-4o and semantic similarity scoring.',
-    stack: ['LangGraph', 'LangChain', 'GPT-4o', 'Semantic Similarity'],
+      'Built a multi-agent LangGraph and LangChain workflow around GPT-4o that encapsulated domain-specific marketing logic and combined LLM reasoning with semantic similarity scoring to validate campaign assets for brand voice, accessibility, and creative-blueprint compliance.',
+    stack: ['LangGraph', 'LangChain', 'GPT-4o', 'LLM Reasoning', 'Semantic Similarity'],
   },
   {
     name: 'FastAPI RAG Research API',
     category: 'Backend API',
     description:
-      'Developed a secure FastAPI RAG API with OAuth2/JWT authentication, enabling internal teams to query Gen-Z advertising research documents through natural language.',
+      'Developed a secure FastAPI RAG service with OAuth2/JWT authentication and document-ingestion pipelines that extracted structured JSON from PDFs and PowerPoint files, enabling natural-language research queries and automated research-to-presentation generation.',
     stack: ['FastAPI', 'OAuth2', 'JWT', 'RAG', 'Python'],
   },
   {
     name: 'OptiClarity / Keratoconus Detection',
     category: 'Machine Learning',
     description:
-      'Trained a ResNet50 model in Google Colab on Kaggle OCT scans to support AI-assisted keratoconus detection and clinical decision support.',
+      'Developed an AI-assisted ophthalmology diagnostic system and trained a ResNet50 convolutional neural network in PyTorch on medical-imaging data to classify keratoconus and support clinical recommendations.',
     stack: ['Python', 'PyTorch', 'ResNet50', 'Google Colab', 'Kaggle'],
   },
   {
     name: 'Gradeview Academic Dashboard',
     category: 'Full Stack',
     description:
-      'Built a full-stack academic dashboard with React, Node.js, Express, and MySQL to help students calculate GPA, analyze grades, manage transcripts, and explore what-if scenarios.',
-    stack: ['React', 'Node.js', 'Express', 'MySQL'],
+      'Built a scalable academic-performance platform with React, Node.js, Express, and MySQL, designing REST APIs, relational database schemas, and reusable UI components for GPA analytics, transcript management, and what-if academic planning.',
+    stack: ['React', 'Node.js', 'Express', 'REST APIs', 'MySQL'],
   },
 ]
 
