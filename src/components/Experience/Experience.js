@@ -1,6 +1,16 @@
 import { useEffect, useRef } from 'react'
-import { education, experience, honors } from '../../portfolio'
+import LaunchIcon from '@material-ui/icons/Launch'
+import { education, experience } from '../../portfolio'
 import './Experience.css'
+
+const renderDetail = (detail) =>
+  detail.split(/(\*\*.*?\*\*)/g).map((part) =>
+    part.startsWith('**') && part.endsWith('**') ? (
+      <strong key={part}>{part.slice(2, -2)}</strong>
+    ) : (
+      part
+    )
+  )
 
 const Experience = () => {
   const sectionRef = useRef(null)
@@ -46,7 +56,7 @@ const Experience = () => {
     }
   }, [])
 
-  if (!experience.length && !education.length && !honors.length) return null
+  if (!experience.length && !education.length) return null
 
   return (
     <section ref={sectionRef} className='section experience' id='experience'>
@@ -74,7 +84,7 @@ const Experience = () => {
                   </div>
                   <ul className='experience__details'>
                     {item.details.map((detail) => (
-                      <li key={detail}>{detail}</li>
+                      <li key={detail}>{renderDetail(detail)}</li>
                     ))}
                   </ul>
                 </div>
@@ -103,10 +113,17 @@ const Experience = () => {
                             href={role.website}
                             target='_blank'
                             rel='noopener noreferrer'
-                            aria-label={`Visit ${role.company} website`}
+                            aria-label={
+                              role.websiteLabel
+                                ? `View ${role.company} ${role.websiteLabel}`
+                                : `Visit ${role.company} website`
+                            }
                           >
-                            {new URL(role.website).hostname.replace('www.', '')}{' '}
-                            <span aria-hidden='true'>↗</span>
+                            <span>
+                              {role.websiteLabel ||
+                                new URL(role.website).hostname.replace('www.', '')}
+                            </span>
+                            <LaunchIcon aria-hidden='true' />
                           </a>
                         )}
                       </div>
@@ -124,7 +141,7 @@ const Experience = () => {
                           <h4 className='experience__project-title'>{project.name}</h4>
                           <ul className='experience__details'>
                             {project.details.map((detail) => (
-                              <li key={detail}>{detail}</li>
+                              <li key={detail}>{renderDetail(detail)}</li>
                             ))}
                           </ul>
                           {project.stack && (
@@ -142,7 +159,7 @@ const Experience = () => {
                   ) : (
                     <ul className='experience__details'>
                       {role.details.map((detail) => (
-                        <li key={detail}>{detail}</li>
+                        <li key={detail}>{renderDetail(detail)}</li>
                       ))}
                     </ul>
                   )}
@@ -162,18 +179,6 @@ const Experience = () => {
         )}
       </div>
 
-      {honors.length > 0 && (
-        <div className='experience__honors'>
-          <h3>Honors & Awards</h3>
-          <div className='honors__grid'>
-            {honors.map((honor) => (
-              <div key={honor} className='honors__item'>
-                {honor}
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
     </section>
   )
 }

@@ -32,9 +32,9 @@ const experience = [
     period: 'May 2026 – Present',
     location: 'Frisco, TX',
     details: [
-      'Developed an AI-powered deployment assistant using agentic workflows, specialized AI workers, and reusable skills to orchestrate Terraform plans, control-plane APIs, and customer provisioning, increasing deployment automation by 60%.',
-      'Designed LLM evaluation frameworks that measured response quality, remediation accuracy, and end-to-end workflow correctness across diverse deployment scenarios.',
-      'Engineered backend orchestration across specialized workers and SaaS APIs, chaining onboarding status, customer configuration, deployment metadata, and instance data to support autonomous reasoning throughout the provisioning lifecycle.',
+      'Developed an AI-powered deployment assistant using **agentic workflows and Terraform** to orchestrate specialized AI workers, reusable skills, control-plane APIs, and customer provisioning, increasing deployment automation by 60%.',
+      'Designed an **LLM evaluation framework** that measured response quality, remediation accuracy, and end-to-end workflow correctness across diverse deployment scenarios.',
+      'Engineered **SaaS API orchestration** across specialized workers, unifying four provisioning data domains—onboarding status, customer configuration, deployment metadata, and instance data—to support autonomous reasoning throughout the deployment lifecycle.',
       'Served as an Intern Ambassador, representing the internship cohort and fostering cross-team collaboration.',
     ],
     stack: ['Agentic Workflows', 'LLM Evaluation', 'Terraform', 'Control-plane APIs', 'SaaS'],
@@ -42,14 +42,15 @@ const experience = [
   {
     company: 'MATH-101',
     website: 'https://math-101.com/',
+    websiteLabel: 'Website',
     position: 'Full-Stack Web Developer',
     period: 'Aug 2025 – Present',
     location: 'Remote',
     details: [
-      'Developed and deployed a production-grade tutoring and course-management platform using Next.js, React, TypeScript, Tailwind CSS, and Firebase Authentication, Firestore, Storage, and Hosting.',
-      'Implemented role-based access control for administrators, students, and pending users, including protected routes, account approval, course assignment, suspension, and automated email workflows.',
+      'Developed and deployed a production-grade tutoring and course-management platform using **Next.js, React, and TypeScript**, integrating four Firebase services: Authentication, Firestore, Storage, and Hosting.',
+      'Implemented **role-based access control** across three access groups—administrators, students, and pending users—including protected routes, account approval, course assignment, suspension, and automated email workflows.',
       'Built an administrative dashboard for managing users, courses, permissions, and account lifecycle operations.',
-      'Hardened the platform with Firebase Security Rules, server-side token verification, granular file permissions, input validation, rate limiting, bot protection, and emulator-based API, database, and storage security tests.',
+      'Hardened the platform with seven defense-in-depth controls, including **Firebase Security Rules and server-side token verification**, granular file permissions, input validation, rate limiting, bot protection, and emulator-based security testing across three surfaces: APIs, databases, and file storage.',
     ],
     stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Firebase', 'RBAC'],
   },
@@ -63,8 +64,8 @@ const experience = [
         name: 'NetBond Advanced Chat',
         details: [
           'Developed an agentic AI assistant using LangGraph Studio and transformer-based LLMs to automatically generate secure AT&T cloud-connection configurations.',
-          'Designed modular RAG workflows using REST APIs and an MCP server to retrieve domain knowledge and generate context-aware cloud-configuration recommendations.',
-          'Implemented a React.js and Node.js interface that allows users to visualize generated configurations in real time.',
+          'Designed a three-stage **RAG and MCP workflow** that retrieved enterprise documentation, grounded transformer-LLM reasoning in the retrieved context, and generated cloud-configuration recommendations through REST APIs.',
+          'Implemented a **React.js and Node.js interface** that allows users to visualize generated configurations in real time.',
           'Applied prompt engineering, structured reasoning, and RAG techniques to produce secure, compliant, and accurate outputs aligned with AT&T connection standards.',
         ],
         stack: ['LangGraph', 'Transformer LLMs', 'RAG', 'MCP', 'React', 'Node.js'],
@@ -72,9 +73,9 @@ const experience = [
       {
         name: 'AskVoice',
         details: [
-          'Migrated and refactored REST APIs to an updated service architecture, ensuring compatibility and improved performance across environments.',
+          'Migrated and refactored **REST APIs and service architecture** into one standardized implementation, preserving cross-environment compatibility while simplifying integration testing and maintenance.',
           'Deployed application updates to development environments through Azure DevOps pipelines for integration testing.',
-          'Used Kusto Query Language (KQL) to analyze Azure Data Explorer (ADX) logs, diagnose system issues, and accelerate root-cause identification.',
+          'Used **KQL and Azure Data Explorer logs** to diagnose system issues and accelerate root-cause identification.',
         ],
         stack: ['REST APIs', 'Azure DevOps', 'KQL', 'Azure Data Explorer'],
       },
@@ -86,10 +87,10 @@ const experience = [
     period: 'Jun 2025 – Aug 2025',
     location: 'Plano, TX',
     details: [
-      'Built an agentic workflow system for the AT&T Marketing Team with LangGraph, LangChain, and GPT-4o, coordinating prompt generation, accessibility optimization, and brand-voice alignment.',
+      'Built a modular agentic workflow with **LangGraph, LangChain, and GPT-4o** that coordinated three content-quality stages—prompt generation, accessibility optimization, and brand-voice alignment.',
       'Designed modular agents that encapsulated domain-specific logic and combined semantic similarity scoring with LLM reasoning to validate campaign assets against creative-blueprint and compliance requirements.',
-      'Developed a secure FastAPI RAG API with OAuth2/JWT authentication, enabling internal teams to query Gen-Z advertising research documents through natural language.',
-      'Engineered data pipelines that extracted structured JSON from PDFs and PowerPoint files and fed automated research-to-PPTX generation workflows, reducing manual curation from hours to minutes.',
+      'Developed a secure **FastAPI RAG API** with OAuth2/JWT authentication, enabling internal teams to query Gen-Z advertising research documents through natural language.',
+      'Engineered **structured document-ingestion pipelines** across two source formats, PDF and PowerPoint, extracting JSON for automated research-to-PPTX generation and reducing manual curation from hours to minutes.',
     ],
     stack: ['LangGraph', 'LangChain', 'FastAPI', 'RAG', 'OAuth2/JWT', 'Python'],
   },
@@ -99,54 +100,23 @@ const experience = [
     period: 'Jun 2024 – Aug 2024',
     location: 'Plano, TX',
     details: [
-      'Developed a Streamlit application enabling users to query PDFs and extract insights through an AI-backed interface.',
-      'Built a personalized AI recommender using GPT-3.5 and a pre-trained Random Forest model to support user-specific guidance.',
+      'Delivered two AI prototypes: a **Streamlit document-query application** and a personalized recommendation system for user-specific guidance.',
+      'Combined GPT-3.5 with a **pre-trained Random Forest model** to blend generated explanations with model-driven recommendations.',
       'Explored LangChain agent design, custom chatbots, and prompt templates to improve AI workflow reliability.',
     ],
     stack: ['Streamlit', 'GPT-3.5', 'LangChain', 'Python', 'Machine Learning'],
-  },
-  {
-    company: 'HBS Lab',
-    position: 'Undergraduate Researcher',
-    period: 'Jan 2025 – May 2025',
-    location: 'UT Dallas',
-    details: [
-      'Fabricated and tested Twisted Coiled Polymer muscles for a robotic orthotic hand.',
-      'Applied OSP Tracker video analysis to measure and graph actuator displacement.',
-      'Helped identify actuation parameters that maximized finger deflection while avoiding overheating.',
-    ],
-    stack: ['Research', 'Data Analysis', 'Actuator Testing', 'OSP Tracker'],
   },
 ]
 
 const projects = [
   {
-    name: 'NetBond Advanced Chat',
-    category: 'AI Agent',
+    name: 'TCP-Actuated Robotic Hand Research',
+    category: 'Robotics Research',
     description:
-      'Engineered a LangGraph-based AI assistant that used transformer LLMs and modular RAG calls to an MCP server to retrieve domain context and generate secure, standards-compliant AT&T cloud-connection configurations, surfaced through a real-time React and Node.js interface.',
-    stack: ['LangGraph', 'Transformer LLMs', 'RAG', 'REST APIs', 'MCP', 'React', 'Node.js'],
-  },
-  {
-    name: 'AskVoice',
-    category: 'Backend API',
-    description:
-      'Migrated and refactored REST APIs for an updated service architecture, validated deployments across environments through Azure DevOps pipelines, and queried Azure Data Explorer logs with KQL to isolate failures and accelerate root-cause analysis.',
-    stack: ['REST APIs', 'Azure DevOps', 'KQL', 'ADX'],
-  },
-  {
-    name: 'AT&T Marketing Agentic Workflow',
-    category: 'AI Agent',
-    description:
-      'Built a multi-agent LangGraph and LangChain workflow around GPT-4o that encapsulated domain-specific marketing logic and combined LLM reasoning with semantic similarity scoring to validate campaign assets for brand voice, accessibility, and creative-blueprint compliance.',
-    stack: ['LangGraph', 'LangChain', 'GPT-4o', 'LLM Reasoning', 'Semantic Similarity'],
-  },
-  {
-    name: 'FastAPI RAG Research API',
-    category: 'Backend API',
-    description:
-      'Developed a secure FastAPI RAG service with OAuth2/JWT authentication and document-ingestion pipelines that extracted structured JSON from PDFs and PowerPoint files, enabling natural-language research queries and automated research-to-presentation generation.',
-    stack: ['FastAPI', 'OAuth2', 'JWT', 'RAG', 'Python'],
+      'Fabricated and tested Twisted and Coiled Polymer muscles for a low-cost robotic hand orthosis, using controlled pulse experiments and OSP Tracker displacement analysis to optimize the test fixture and identify 12 A for 0.125 seconds with a 10-second cooling interval as the best tested actuation-recovery balance.',
+    stack: ['Experimental Design', 'Data Analysis', 'TCP Actuators', 'OSP Tracker', 'Robotics'],
+    livePreview: `${process.env.PUBLIC_URL}/Kunju_Menon_ECS1192_Final_2025.pdf`,
+    livePreviewLabel: 'Research report',
   },
   {
     name: 'OptiClarity / Keratoconus Detection',
@@ -161,6 +131,7 @@ const projects = [
     description:
       'Built a scalable academic-performance platform with React, Node.js, Express, and MySQL, designing REST APIs, relational database schemas, and reusable UI components for GPA analytics, transcript management, and what-if academic planning.',
     stack: ['React', 'Node.js', 'Express', 'REST APIs', 'MySQL'],
+    sourceCode: 'https://github.com/Tomigames/Team10',
   },
 ]
 
@@ -182,7 +153,7 @@ const skills = [
 const honors = [
   'Eugene McDermott Scholarship',
   'National Merit Scholarship',
-  'Dean’s List: Fall 2023, Spring 2024, Fall 2024, Spring 2025',
+  'Dean’s List: Fall 2023, Spring 2024, Fall 2024, Spring 2025, Fall 2025, Spring 2026',
 ]
 
 const contact = {

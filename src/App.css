@@ -7,6 +7,26 @@
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+.honors__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.honors__item {
+  padding: 1.5rem;
+  border-left: 4px solid var(--clr-primary);
+  border-radius: 1rem;
+  background-color: var(--clr-bg-alt);
+  box-shadow: var(--shadow);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.honors__item:hover {
+  transform: translateY(-3px);
+}
+
 .light {
   --clr-bg: #eaf4ff;
   --clr-bg-alt: #ffffff;

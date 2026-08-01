@@ -42,9 +42,13 @@ const ProjectContainer = ({ project }) => (
         {project.sourceCode && (
           <a
             href={project.sourceCode}
-            aria-label='source code'
-            className='link link--icon'
+            aria-label={`View ${project.name} source code`}
+            title='View source code'
+            className='project__link'
+            target='_blank'
+            rel='noopener noreferrer'
           >
+            <span>{project.sourceCodeLabel || 'Source Code'}</span>
             <GitHubIcon />
           </a>
         )}
@@ -52,9 +56,13 @@ const ProjectContainer = ({ project }) => (
         {project.livePreview && (
           <a
             href={project.livePreview}
-            aria-label='live preview'
-            className='link link--icon'
+            aria-label={`View ${project.name} ${project.livePreviewLabel || 'live preview'}`}
+            title={`View ${project.livePreviewLabel || 'live preview'}`}
+            className='project__link'
+            target='_blank'
+            rel='noopener noreferrer'
           >
+            <span>{project.livePreviewLabel || 'Live Demo'}</span>
             <LaunchIcon />
           </a>
         )}
