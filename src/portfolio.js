@@ -135,6 +135,17 @@ const projects = [
   },
 ]
 
+const certifications = [
+  {
+    name: 'AWS Certified AI Practitioner',
+    issuer: 'Amazon Web Services (AWS)',
+    issued: 'August 15, 2026',
+    expires: 'August 15, 2029',
+    status: 'Active',
+    certificate: `${process.env.PUBLIC_URL}/AWS-Certified-AI-Practitioner.pdf`,
+  },
+]
+
 const skills = [
   {
     category: 'Programming Languages',
@@ -142,11 +153,40 @@ const skills = [
   },
   {
     category: 'Frameworks/Libraries',
-    items: ['React', 'Node.js', 'NumPy', 'Pandas', 'PyTorch', 'LangChain', 'LangGraph', 'FastAPI'],
+    items: [
+      'PyTorch',
+      'LangChain',
+      'LangGraph',
+      'GPT-4o',
+      'Retrieval-Augmented Generation (RAG)',
+      'Transformer-based LLMs',
+      'Prompt Engineering',
+      'Computer Vision',
+      'React',
+      'Node.js',
+      'FastAPI',
+      'NumPy',
+      'Pandas',
+      'Firestore',
+      'PostgreSQL',
+    ],
   },
   {
     category: 'Tools',
-    items: ['Git', 'Azure DevOps', 'Terraform', 'MCP', 'OAuth2/JWT'],
+    items: [
+      'Git',
+      'Azure DevOps',
+      'Terraform',
+      'MCP',
+      'OAuth2/JWT',
+      'Docker',
+      'Kubernetes',
+      'GitHub Copilot',
+      'Codex',
+      'Windsurf',
+      'CI/CD',
+      'AWS',
+    ],
   },
 ]
 
@@ -162,4 +202,14 @@ const contact = {
   location: 'Flower Mound, TX',
 }
 
-export { header, about, education, experience, projects, skills, honors, contact }
+export {
+  header,
+  about,
+  education,
+  experience,
+  projects,
+  certifications,
+  skills,
+  honors,
+  contact,
+}

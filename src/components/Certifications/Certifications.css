@@ -1,0 +1,45 @@
+.certifications__grid { display: grid; gap: 1.5rem; }
+
+.certification {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  overflow: hidden;
+  border: 1px solid rgba(41, 120, 181, 0.14);
+  border-radius: 1rem;
+  background-color: var(--clr-bg-alt);
+  box-shadow: 0 14px 36px rgba(41, 120, 181, 0.08);
+}
+
+.certification__brand {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: 250px; padding: 2rem; color: #232f3e;
+  background: linear-gradient(145deg, #ffb84d, #ff9900);
+}
+
+.certification__aws { font-family: Arial, sans-serif; font-size: 3.5rem; font-weight: 700; line-height: 1; }
+.certification__smile { width: 4.2rem; height: 1.15rem; margin-top: -0.1rem; border-bottom: 0.28rem solid #232f3e; border-radius: 0 0 60% 60%; transform: rotate(-4deg); }
+.certification__content { display: flex; flex-direction: column; justify-content: center; padding: 2rem 2.25rem; }
+.certification__heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 1.5rem; }
+.certification__issuer { margin-bottom: 0.35rem; color: var(--clr-primary); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+.certification__name { color: var(--clr-fg-alt); font-size: 1.45rem; }
+
+.certification__status {
+  display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.42rem 0.7rem;
+  border-radius: 999px; color: #16734a; background-color: rgba(34, 197, 94, 0.12);
+  font-size: 0.78rem; font-weight: 700; white-space: nowrap;
+}
+.certification__status svg { width: 1.1rem; height: 1.1rem; }
+.certification__dates { display: flex; flex-wrap: wrap; gap: 1.25rem 3rem; margin: 1.5rem 0; }
+.certification__dates dt { margin-bottom: 0.15rem; color: var(--clr-fg); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+.certification__dates dd { color: var(--clr-fg-alt); font-weight: 600; }
+.certification__link { display: inline-flex; align-items: center; align-self: flex-start; gap: 0.55rem; text-decoration: none; }
+.certification__link svg { width: 1rem; height: 1rem; }
+.dark .certification { border-color: rgba(142, 169, 255, 0.14); box-shadow: 0 14px 36px rgba(0, 0, 0, 0.16); }
+.dark .certification__status { color: #86efac; background-color: rgba(34, 197, 94, 0.1); }
+
+@media (max-width: 700px) {
+  .certification { grid-template-columns: 1fr; }
+  .certification__brand { min-height: 145px; }
+  .certification__content { padding: 1.5rem; }
+  .certification__heading { flex-direction: column; gap: 0.9rem; }
+}
