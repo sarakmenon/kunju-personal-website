@@ -12,10 +12,23 @@ const Certifications = () => {
 
       <div className='certifications__grid'>
         {certifications.map((certification) => (
-          <article className='certification' key={certification.name}>
+          <article
+            className={`certification certification--${certification.brand}`}
+            key={certification.name}
+          >
             <div className='certification__brand' aria-hidden='true'>
-              <span className='certification__aws'>aws</span>
-              <span className='certification__smile' />
+              {certification.brand === 'databricks' ? (
+                <>
+                  <span className='certification__databricks-mark'>◇</span>
+                  <span className='certification__databricks'>databricks</span>
+                  <span className='certification__academy'>Academy</span>
+                </>
+              ) : (
+                <>
+                  <span className='certification__aws'>aws</span>
+                  <span className='certification__smile' />
+                </>
+              )}
             </div>
 
             <div className='certification__content'>
@@ -39,17 +52,25 @@ const Certifications = () => {
                   <dt>Expires</dt>
                   <dd>{certification.expires}</dd>
                 </div>
+                {certification.credentialId && (
+                  <div>
+                    <dt>Credential ID</dt>
+                    <dd>{certification.credentialId}</dd>
+                  </div>
+                )}
               </dl>
 
-              <a
-                className='btn btn--outline certification__link'
-                href={certification.certificate}
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                View certificate
-                <LaunchIcon aria-hidden='true' />
-              </a>
+              {certification.certificate && (
+                <a
+                  className='btn btn--outline certification__link'
+                  href={certification.certificate}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Show credential
+                  <LaunchIcon aria-hidden='true' />
+                </a>
+              )}
             </div>
           </article>
         ))}

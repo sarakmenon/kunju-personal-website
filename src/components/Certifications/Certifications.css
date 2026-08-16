@@ -18,6 +18,10 @@
 
 .certification__aws { font-family: Arial, sans-serif; font-size: 3.5rem; font-weight: 700; line-height: 1; }
 .certification__smile { width: 4.2rem; height: 1.15rem; margin-top: -0.1rem; border-bottom: 0.28rem solid #232f3e; border-radius: 0 0 60% 60%; transform: rotate(-4deg); }
+.certification--databricks .certification__brand { color: #1b3139; background: linear-gradient(145deg, #fff, #f4f0ed); }
+.certification__databricks-mark { color: #ff3621; font-size: 3.2rem; font-weight: 700; line-height: 0.7; transform: rotate(45deg); }
+.certification__databricks { margin-top: 0.6rem; color: #111; font-family: Arial, sans-serif; font-size: 1.55rem; font-weight: 700; letter-spacing: -0.04em; }
+.certification__academy { margin-top: 0.1rem; color: #1b3139; font-size: 0.85rem; }
 .certification__content { display: flex; flex-direction: column; justify-content: center; padding: 2rem 2.25rem; }
 .certification__heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 1.5rem; }
 .certification__issuer { margin-bottom: 0.35rem; color: var(--clr-primary); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }

@@ -139,10 +139,33 @@ const certifications = [
   {
     name: 'AWS Certified AI Practitioner',
     issuer: 'Amazon Web Services (AWS)',
+    brand: 'aws',
     issued: 'August 15, 2026',
     expires: 'August 15, 2029',
     status: 'Active',
     certificate: `${process.env.PUBLIC_URL}/AWS-Certified-AI-Practitioner.pdf`,
+  },
+  {
+    name: 'Academy Accreditation - Databricks Fundamentals',
+    issuer: 'Databricks',
+    brand: 'databricks',
+    issued: 'August 12, 2024',
+    expires: 'May 2027',
+    status: 'Active',
+    credentialId: '111921208',
+    certificate:
+      'https://credentials.databricks.com/5e84370c-73b1-4d39-a14f-d07689caeb9c',
+  },
+  {
+    name: 'Academy Accreditation - Generative AI Fundamentals',
+    issuer: 'Databricks',
+    brand: 'databricks',
+    issued: 'August 4, 2024',
+    expires: 'May 2027',
+    status: 'Active',
+    credentialId: '111300048',
+    certificate:
+      'https://credentials.databricks.com/b28f1d46-227d-4474-8470-3ca38045023d#acc.a8fJ7TNB',
   },
 ]
 
