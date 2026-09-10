@@ -9,7 +9,7 @@ const about = {
   picture: `${process.env.PUBLIC_URL}/images/headshot.jpg`,
   description:
     'I’m a Computer Science student at The University of Texas at Dallas with a 4.0 GPA, graduating in May 2027. My work focuses on software engineering, generative AI, agentic systems, RAG, full-stack development, and applied machine learning. I’ve built AI agents, secure APIs, React/Node interfaces, automation workflows, and research-driven ML tools across internships, research labs, and student projects.',
-  resume: `${process.env.PUBLIC_URL}/Saraswathi.Menon.Resume.docx`,
+  resume: `${process.env.PUBLIC_URL}/SaraswathiMenon.pdf`,
   social: {
     linkedin: 'https://www.linkedin.com/in/saraswathi-menon-678259248/',
   },
@@ -32,12 +32,12 @@ const experience = [
     period: 'May 2026 – Present',
     location: 'Frisco, TX',
     details: [
-      'Developed an AI-powered deployment assistant using **agentic workflows and Terraform** to orchestrate specialized AI workers, reusable skills, control-plane APIs, and customer provisioning, increasing deployment automation by 60%.',
-      'Designed an **LLM evaluation framework** that measured response quality, remediation accuracy, and end-to-end workflow correctness across diverse deployment scenarios.',
-      'Engineered **SaaS API orchestration** across specialized workers, unifying four provisioning data domains—onboarding status, customer configuration, deployment metadata, and instance data—to support autonomous reasoning throughout the deployment lifecycle.',
+      'Developed an AI-powered Azure deployment automation platform using agentic workflows, specialized AI workers, and LLM reasoning to orchestrate Terraform infrastructure and production deployment workflows, increasing enterprise deployment automation by 40% and improving operational decision-making.',
+      'Developed production-grade AI microservices and agentic workflows integrating SaaS APIs, deployment metadata, and REST services to automate enterprise workflows and reduce manual input correction by 20%.',
+      'Collaborated with cross-functional engineers to build backend orchestration and control-plane integrations for multi-agent deployment workflows, improving reliability and routing accuracy by 30%.',
       'Served as an Intern Ambassador, representing the internship cohort and fostering cross-team collaboration.',
     ],
-    stack: ['Agentic Workflows', 'LLM Evaluation', 'Terraform', 'Control-plane APIs', 'SaaS'],
+    stack: ['Azure', 'Agentic Workflows', 'LLM Reasoning', 'Terraform', 'Control-plane APIs', 'SaaS'],
   },
   {
     company: 'MATH-101',
@@ -47,7 +47,7 @@ const experience = [
     period: 'Aug 2025 – Present',
     location: 'Remote',
     details: [
-      'Developed and deployed a production-grade tutoring and course-management platform using **Next.js, React, and TypeScript**, integrating four Firebase services: Authentication, Firestore, Storage, and Hosting.',
+      'Developed and deployed a responsive tutoring and course-management platform supporting **7 math courses** using **Next.js, React, TypeScript, and Tailwind CSS**, building reusable UI components and integrating Firebase Authentication, Firestore, Storage, and Hosting.',
       'Implemented **role-based access control** across three access groups—administrators, students, and pending users—including protected routes, account approval, course assignment, suspension, and automated email workflows.',
       'Built an administrative dashboard for managing users, courses, permissions, and account lifecycle operations.',
       'Hardened the platform with seven defense-in-depth controls, including **Firebase Security Rules and server-side token verification**, granular file permissions, input validation, rate limiting, bot protection, and emulator-based security testing across three surfaces: APIs, databases, and file storage.',
@@ -63,21 +63,21 @@ const experience = [
       {
         name: 'NetBond Advanced Chat',
         details: [
-          'Developed an agentic AI assistant using LangGraph Studio and transformer-based LLMs to automatically generate secure AT&T cloud-connection configurations.',
-          'Designed a three-stage **RAG and MCP workflow** that retrieved enterprise documentation, grounded transformer-LLM reasoning in the retrieved context, and generated cloud-configuration recommendations through REST APIs.',
-          'Implemented a **React.js and Node.js interface** that allows users to visualize generated configurations in real time.',
+          'Developed an enterprise agentic AI platform using **LangGraph Studio, Model Context Protocol (MCP), and transformer models** to orchestrate AI agents and automate secure cloud-configuration generation.',
+          'Engineered modular **RAG pipelines** integrating MCP servers, Python FastAPI REST APIs, and enterprise knowledge sources, enabling AI agents to retrieve domain context and execute external tools for accurate cloud-configuration recommendations.',
+          'Designed an end-to-end AI application combining LLM reasoning, prompt engineering, and a **React and Node.js interface** for real-time generation, validation, and editing of cloud configurations.',
           'Applied prompt engineering, structured reasoning, and RAG techniques to produce secure, compliant, and accurate outputs aligned with AT&T connection standards.',
         ],
-        stack: ['LangGraph', 'Transformer LLMs', 'RAG', 'MCP', 'React', 'Node.js'],
+        stack: ['LangGraph', 'Transformer LLMs', 'RAG', 'MCP', 'Python', 'FastAPI', 'React', 'Node.js'],
       },
       {
         name: 'AskVoice',
         details: [
-          'Migrated and refactored **REST APIs and service architecture** into one standardized implementation, preserving cross-environment compatibility while simplifying integration testing and maintenance.',
-          'Deployed application updates to development environments through Azure DevOps pipelines for integration testing.',
+          'Migrated and refactored **Python FastAPI REST APIs and MongoDB data integrations** to an updated service architecture, ensuring compatibility and improving performance across deployment environments.',
+          'Deployed applications through **Azure DevOps CI/CD pipelines**, supporting integration testing and production validation.',
           'Used **KQL and Azure Data Explorer logs** to diagnose system issues and accelerate root-cause identification.',
         ],
-        stack: ['REST APIs', 'Azure DevOps', 'KQL', 'Azure Data Explorer'],
+        stack: ['Python', 'FastAPI', 'MongoDB', 'REST APIs', 'Azure DevOps', 'CI/CD', 'KQL', 'Azure Data Explorer'],
       },
     ],
   },
@@ -87,10 +87,10 @@ const experience = [
     period: 'Jun 2025 – Aug 2025',
     location: 'Plano, TX',
     details: [
-      'Built a modular agentic workflow with **LangGraph, LangChain, and GPT-4o** that coordinated three content-quality stages—prompt generation, accessibility optimization, and brand-voice alignment.',
+      'Built cloud-agnostic agentic AI workflows with **LangGraph, LangChain, GPT-4o, and prompt engineering** to automate enterprise marketing content generation across prompt generation, accessibility optimization, and brand-voice alignment.',
       'Designed modular agents that encapsulated domain-specific logic and combined semantic similarity scoring with LLM reasoning to validate campaign assets against creative-blueprint and compliance requirements.',
       'Developed a secure **FastAPI RAG API** with OAuth2/JWT authentication, enabling internal teams to query Gen-Z advertising research documents through natural language.',
-      'Engineered **structured document-ingestion pipelines** across two source formats, PDF and PowerPoint, extracting JSON for automated research-to-PPTX generation and reducing manual curation from hours to minutes.',
+      'Designed scalable **AI data pipelines** that transformed unstructured PDFs and PowerPoint documents into structured JSON datasets for downstream retrieval, analysis, and automated content generation, reducing document-processing time by 30%.',
     ],
     stack: ['LangGraph', 'LangChain', 'FastAPI', 'RAG', 'OAuth2/JWT', 'Python'],
   },
@@ -119,11 +119,11 @@ const projects = [
     livePreviewLabel: 'Research report',
   },
   {
-    name: 'OptiClarity / Keratoconus Detection',
+    name: 'OptiClarity — Deep Learning Eye Health Platform',
     category: 'Machine Learning',
     description:
-      'Developed an AI-assisted ophthalmology diagnostic system and trained a ResNet50 convolutional neural network in PyTorch on medical-imaging data to classify keratoconus and support clinical recommendations.',
-    stack: ['Python', 'PyTorch', 'ResNet50', 'Google Colab', 'Kaggle'],
+      'Developed an AI-powered eye health platform using PyTorch, TensorFlow, and ResNet50 CNN architectures to analyze four types of retinal scans across four deep learning models, including an ensemble model for multimodal disease classification. Built an end-to-end diagnostic workflow with a LangChain-based RAG assistant for image-based disease prediction and context-aware eye-health guidance through a React and Python web application.',
+    stack: ['Python', 'React', 'PyTorch', 'TensorFlow', 'ResNet50', 'LangChain', 'RAG'],
   },
   {
     name: 'Gradeview Academic Dashboard',
